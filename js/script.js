@@ -8,7 +8,7 @@ const { createApp } = Vue
         tasks: [
           {
             text: 'Togliere la muffa in bagno',
-            done: false,
+            done: true,
           },
           {
             text: 'Lavare i denti a chiwawa',

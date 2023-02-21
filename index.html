@@ -27,7 +27,7 @@
 				<div class="container">
 					<div class="todo-list">
 						<ul class="todo-list__wrapper">
-							<li v-for="(task, index) in tasks">
+							<li v-for="(task, index) in tasks" :class="task.done === true ? 'done' : '' ">
 								<button class="btn__delete">x</button>
 								{{ task.text}}
 							</li>
