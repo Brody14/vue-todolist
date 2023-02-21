@@ -27,18 +27,11 @@
 				<div class="container">
 					<div class="todo-list">
 						<ul class="todo-list__wrapper">
-							<li>
+							<li v-for="(task, index) in tasks">
 								<button class="btn__delete">x</button>
-								fare cose
+								{{ task.text}}
 							</li>
-							<li>
-								<button class="btn__delete">x</button>
-								fare cose
-							</li>
-							<li>
-								<button class="btn__delete">x</button>
-								fare cose
-							</li>
+							
 						</ul>
 					</div>
 				</div>
