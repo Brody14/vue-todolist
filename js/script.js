@@ -19,12 +19,24 @@ createApp({
 					done: false,
 				},
 			],
+			newTask: "",
 		};
 	},
 	methods: {
-    deleteTask(startIndex) {
-      //console.log(startIndex, this.tasks)
-      this.tasks.splice(startIndex, 1)
-    }
-  }
+		deleteTask(startIndex) {
+			//console.log(startIndex, this.tasks)
+			this.tasks.splice(startIndex, 1);
+		},
+		addTask() {
+			//console.log(this.newTask)
+			if (!this.newTask.length <= 0) {
+				this.tasks.push({
+					text: this.newTask,
+					done: false,
+				});
+			}
+			//console.log(this.tasks),
+			this.newTask = "";
+		},
+	},
 }).mount("#app");
