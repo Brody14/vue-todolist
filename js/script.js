@@ -29,12 +29,17 @@ createApp({
 		},
 		addTask() {
 			//console.log(this.newTask)
-			if (!this.newTask.length <= 0) {
-				this.tasks.push({
-					text: this.newTask,
-					done: false,
-				});
+			let text = this.newTask.trim();
+
+			if (text === "") {
+				this.newTask = "";
+				return;
 			}
+
+			this.tasks.push({
+				text: text,
+				done: false,
+			});
 			//console.log(this.tasks),
 			this.newTask = "";
 		},
